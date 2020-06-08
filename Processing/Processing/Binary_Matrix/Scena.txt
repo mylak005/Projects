@@ -1,0 +1,5 @@
+1)  I numeri compaiono pian piano e all inizio scompaiono ;
+2)  i numeri salgono da sotto
+
+le matrici sono in una griglia ma ce ne sono alcune dietro piu opache
+le matrici sono 12 X 13
