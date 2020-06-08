@@ -12,9 +12,7 @@ public class Animalese {
 class Speech {
   public void textToSpeech(String stringy) {
     System.out.println("initializing...");
-    String filename = stringy.toLowerCase();
-    filename = filename.replaceAll(" ", "_");
-    filename = filename.replace(".", "_");
+    String filename = stringy.toLowerCase().replaceAll(" ", "_").replace(".", "_");
     double rnd_factor;
     String pitch = "high";
 
@@ -109,8 +107,6 @@ class Speech {
         e.printStackTrace();
     }
 
-    System.out.println("Successfully wrote to the file.");
-
     try (FileWriter myWriter = new FileWriter(filename + ".bat")) {
           myWriter.write("ffmpeg -f concat -safe 0 -i " + filename + ".txt -c copy " + filename + ".wav");
           myWriter.close();
@@ -118,6 +114,19 @@ class Speech {
           System.out.println("An error occurred...");
           e.printStackTrace();
       }
-      System.out.println("Successfully wrote to the file.");
+      System.out.println("Successfully wrote to the files...");
     }
+  
+    try (FileWriter myWriter = new FileWriter("run.bat")) {
+            myWriter.write("call changepitch.bat");
+            myWriter.write("call " + filename + ".bat");
+            myWriter.write("start" + filename + ".wav");
+            myWriter.close();
+            Process p =  Runtime.getRuntime().exec("cmd /c run.bat", null, new File(System.getProperty("user.dir")));
+        } catch (IOException e) {
+            System.out.println("An error occurred...");
+            e.printStackTrace();
+        }
+        System.out.println("Successfully wrote to the files...");
+      }
 }
