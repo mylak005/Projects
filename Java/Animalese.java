@@ -121,6 +121,10 @@ class Speech {
             myWriter.write("call changepitch.bat");
             myWriter.write("call " + filename + ".bat");
             myWriter.write("start" + filename + ".wav");
+            myWriter.write("del " + System.getProperty("user.dir") + "/sounds/" + pitch + "/mom");
+            myWriter.write("del " + filename + ".bat")
+            myWriter.write("del " + filename + ".txt")
+            myWriter.write("del changepitch.bat")
             myWriter.close();
             Process p =  Runtime.getRuntime().exec("cmd /c run.bat", null, new File(System.getProperty("user.dir")));
         } catch (IOException e) {
