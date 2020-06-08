@@ -2,10 +2,10 @@ import java.util.*;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class App {
+public class Animalese {
   public static void main(String[] args) {
     Speech speech = new Speech();
-    speech.textToSpeech("Vaffanculo");
+    speech.textToSpeech("Example");
   }
 }
 
@@ -30,7 +30,7 @@ class Speech {
       } else {
         num = Integer.toString(numint);
       }
-    	sounds.put(keys[ltr], "C:/Users/leoni/Desktop/Francesco/PROGRAMMAZIONE/Java_Processing/sounds/" + pitch + "/sound" + num + ".wav");
+    	sounds.put(keys[ltr], System.getProperty("user.dir") + "/sounds/" + pitch + "/sound" + num + ".wav");
     }
 
     if (pitch == "med") {
