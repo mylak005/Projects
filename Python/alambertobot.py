@@ -7,9 +7,6 @@ from bot_token import TOKEN
 bestemmie = 0
 warnings = {}
 karmas = {}
-members = {
-'DioDelleMele': 914408072, 'Ariedo24': 1075014903, 'ilbarbi': 673245789
-}
 bannable = [
      ["dio","madonna","pio"],["no", "porco","puttana","bastardo","schifoso","ladro","boia","cane"]
 ]
@@ -147,7 +144,7 @@ def on_chat_message(msg):
             bot.sendMessage(chat_id, "NO PORNNNNNNNNNNNN\n instagram.com/p/CB_ZeejKCBA/?igshid=1qjmebknoevoo")
 
         if text == "/sourcecode":
-            bot.sendMessage(chat_id, "Ecco il codice sorgente di @Alambertobot: attaualmente non disponibile.")
+            bot.sendMessage(chat_id, "Ecco il codice sorgente di @Alambertobot: https://github.com/mylak005/Projects/edit/master/Python/alambertobot.py")
 
     #Other
     if content_type == "new_chat_member":
