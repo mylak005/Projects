@@ -144,7 +144,7 @@ def on_chat_message(msg):
             bot.sendMessage(chat_id, "NO PORNNNNNNNNNNNN\n instagram.com/p/CB_ZeejKCBA/?igshid=1qjmebknoevoo")
 
         if text == "/sourcecode":
-            bot.sendMessage(chat_id, "Ecco il codice sorgente di @Alambertobot: https://github.com/mylak005/Projects/edit/master/Python/alambertobot.py")
+            bot.sendMessage(chat_id, "Ecco il codice sorgente di @Alambertobot: https://github.com/mylak005/Projects/blob/master/Python/alambertobot.py")
 
     #Other
     if content_type == "new_chat_member":
