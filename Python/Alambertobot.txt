@@ -1,2 +1,7 @@
 @alamberto_bot on Telegram.
-Chck here for the source code !
+Check here for the source code!
+This bot is developed in Python 3.7.3 with the library telepot.
+The bot is hosted thank to pythonanywhere 24/7.
+For any info, message @Mylak005 on telegram.
+
+Thank.
